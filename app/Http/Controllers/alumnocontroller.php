@@ -60,7 +60,7 @@ class alumnocontroller extends Controller
     //ELIMINAR ALUMNOS
     public function delete($carne){
         alumno::destroy($carne);
-        return back() ->with('alumnoguardado', 'Alumno guardado con exito');
+        return back() ->with('alumnoeliminado', 'Alumno eliminado con exito');
     }
 
     //FORMULARIO PARA EDITAR ALUMNOS
