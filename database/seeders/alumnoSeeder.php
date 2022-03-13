@@ -1,9 +1,9 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\Models\alumno;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+//use Illuminate\Support\Facades\DB;
 
 class alumnoSeeder extends Seeder
 {
@@ -14,11 +14,11 @@ class alumnoSeeder extends Seeder
      */
     public function run()
     {
-        $foto = ('foto/OPRdCCGb6A9nMhoWwQVpy221wDyydzaIsPcSveOx.jpg');
-        $foto1 = ('foto/DMfq07L5Q6qGtBXQVOn1BTGdIwVrGnnUiHHsKkA1.jpg');
-        $foto2 = ('foto/28TdRNmsIzR58w5LHziHZJE5iyKawgKVzm6pq9B5.jpg');
+       // $foto = ('foto/OPRdCCGb6A9nMhoWwQVpy221wDyydzaIsPcSveOx.jpg');
+        //$foto1 = ('foto/DMfq07L5Q6qGtBXQVOn1BTGdIwVrGnnUiHHsKkA1.jpg');
+        //$foto2 = ('foto/28TdRNmsIzR58w5LHziHZJE5iyKawgKVzm6pq9B5.jpg');
 
-        DB::table('alumno')->insert([
+        /*DB::table('alumno')->insert([
             'carne' => '10020',
             'nombre' => 'Karol Castillo',
             'alias' => 'Cas',
@@ -49,6 +49,7 @@ class alumnoSeeder extends Seeder
             'fecha_nacimiento' => '2002-04-04',
             'telefono' => '47338935',
             'id_categoria' => '3'
-        ]);
+        ]);*/
+        alumno::factory(1000)->create();
     }
 }

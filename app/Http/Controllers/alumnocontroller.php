@@ -15,7 +15,7 @@ class alumnocontroller extends Controller
         $alumnos = DB::table('alumno')
             ->join('categoria', 'alumno.id_categoria', '=', 'categoria.id_categoria')
             ->select('alumno.*', 'categoria.descripcion')
-            ->paginate(10);
+            ->paginate(75);
 
 
         return view('Estudiantes.lista', compact('alumnos'));

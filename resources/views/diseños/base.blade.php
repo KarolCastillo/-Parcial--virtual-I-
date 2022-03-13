@@ -24,7 +24,7 @@
         <a class="nav-link" href="{{url('/CREAR')}}">INGRESAR NUEVO ALUMNO</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="{{url('/LISTADO_cat')}}">LISTA GRADO</a>
+        <a class="nav-link" href="{{url('/LISTADO_cat')}}">LISTA CATEGORIA</a>
     </li>
 
 </ul>

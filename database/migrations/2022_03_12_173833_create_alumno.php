@@ -14,14 +14,18 @@ class CreateAlumno extends Migration
     public function up()
     {
         Schema::create('alumno', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->string("carne");
             $table->string("nombre");
             $table->string("alias");
             $table->string("foto");
             $table->string("correo");
-            $table->date("fecha_nacimiento");
+            $table->string("fecha_nacimiento");
             $table->string("telefono");
-            $table->integer("id_categoria");
+
+
+
+
         });
     }
 

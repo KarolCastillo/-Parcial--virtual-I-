@@ -8,7 +8,7 @@ class categoriacontroller extends Controller
 {
     //LISTADO DE LAS CATEGORIAS DISPONIBLES
     public function listado(){
-        $data['categoria']=categoria::paginate(75);
+        $data['categoria']=categoria::paginate(50);
         return view('Categoria.listacat',$data);
     }
 

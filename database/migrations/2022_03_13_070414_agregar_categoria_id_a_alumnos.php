@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoria extends Migration
+class AgregarCategoriaIdAAlumnos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateCategoria extends Migration
      */
     public function up()
     {
-        Schema::create('categoria', function (Blueprint $table) {
-            $table->unsignedBigInteger('id_categoria');
-            $table->string("descripcion");
+        Schema::table('alumno', function (Blueprint $table) {
+            $table->unsignedInteger('id_categoria');
+            $table->foreign('id_categoria')->references('id_categoria')->on('categoria');
         });
     }
 
@@ -26,6 +26,8 @@ class CreateCategoria extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categoria');
+        Schema::table('alumno', function (Blueprint $table) {
+            //
+        });
     }
 }

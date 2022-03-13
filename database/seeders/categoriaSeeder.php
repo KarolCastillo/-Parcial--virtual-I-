@@ -1,9 +1,9 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\Models\categoria;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+//use Illuminate\Support\Facades\DB;
 
 class categoriaSeeder extends Seeder
 {
@@ -14,7 +14,7 @@ class categoriaSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categoria')->insert([
+        /*DB::table('categoria')->insert([
             'id_categoria' => '1',
             'descripcion' => 'EXCELENTE'
         ]);
@@ -27,6 +27,7 @@ class categoriaSeeder extends Seeder
         DB::table('categoria')->insert([
             'id_categoria' => '3',
             'descripcion' => 'REGULAR'
-        ]);
+        ]);*/
+        categoria::factory(100)->create();
     }
 }
